@@ -70,6 +70,8 @@ class _HomePageState extends State<HomePage> {
           double percent = offset / MAX_OFFSET;
           if(percent > 1.0) {
             percent = 1.0;
+          } else if (percent <= 0) {
+            percent = 0.0;
           }
           setState(() {
             _appBarOpacity = percent;
